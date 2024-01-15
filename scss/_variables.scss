@@ -1,0 +1,52 @@
+@mixin display($justify: start, $align: start, $direction: row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin textStyle($color: #fff, $text-align: center, $fs: 16px, $fw: 600, $lh: 140%) {
+    color: $color;
+    text-align: $text-align;
+    font-family: Work Sans;
+    font-size: $fs;
+    font-style: normal;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin btn($width: 152px, $padding: 20px, $background-image: url("../images/avatar.svg"),$background-image-hover:url("../images/avatar-hover.svg"), $background-color: #A259FF) {
+    position: relative;
+    width: $width;
+    padding: $padding 0px;
+    background-color: $background-color;
+    display: inline-block;
+    border-radius: 20px;
+    padding-left: 32px;
+    border: 1px solid $background-color;
+    transition: all 0.4s ease;
+  
+
+
+    &:before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        left: 30px;
+        background-size: 100% ;
+        background-repeat: no-repeat;
+        background-image: $background-image;
+        transition: all 0.4s ease;
+    }
+
+    &:hover:before{
+        background-image: $background-image-hover;
+    }
+    &:hover {
+        background-color: transparent;
+        color: $background-color;
+    }
+    @include textStyle($fw: 600);
+
+}

@@ -1,0 +1,37 @@
+.hero__section {
+    padding: 80px 0px;
+}
+
+.hero__content {
+    width: 510px;
+}
+
+.hero__title {
+    @include textStyle($fs: 67px, $fw: 600, $lh: 110%, $text-align: start);
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.hero__text {
+    @include textStyle ($fs: 22px, $fw: 400, $lh: 160%, $text-align: start);
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+
+.hero__link {
+    @include btn($width: 224px, $background-image: url("../images/rocket-logo.svg"), $background-image-hover: url("../images/rocket-hover.svg"));
+    margin-bottom: 30px;
+}
+
+.statistic {
+    @include display($text-align: center, $justify:space-between);
+}
+
+.statistic__item strong{
+    text-transform: capitalize;
+    @include textStyle($fs:22px,$fw:700,$lh:140%)
+}
+
+
+

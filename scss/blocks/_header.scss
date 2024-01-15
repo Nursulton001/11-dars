@@ -1,0 +1,48 @@
+.site-header{
+    padding: 20px 0px;
+}
+.header{
+    @include display($justify:space-between,$align:center)
+}
+
+.navbar__list,.navbar{
+    @include display ($align:center)
+}
+
+.navbar__item{
+    padding: 20px;
+}
+
+.navbar{
+    gap: 10px;
+}
+
+.navbar__link{
+    @include textStyle()
+}
+
+.navbar__sign-up{
+    @include btn()
+}
+
+.header__hamburger-btn{
+    border: none;
+    background-color: transparent;
+    display: none;
+} 
+
+@media (max-width:927px){
+    .site-header{
+        padding: 15px 0px;
+    }
+    .navbar{
+        display: none;
+    }
+    .header__hamburger-btn{
+        display: block;
+    }
+    .header__logo-img{
+        width: 182px;
+        height: 24px;
+    }
+}
